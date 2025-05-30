@@ -72,7 +72,7 @@ export default function App() {
       try {
         await AsyncStorage.setItem('notes', JSON.stringify(notes));
       } catch (error) {
-        console.error('Lỗi khi lưu ghi chú:', error);
+        console.error('Lỗi khi lưu ghi chú: namvu', error);
       }
     };
 
