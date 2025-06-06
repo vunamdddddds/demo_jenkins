@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
-import { TextInput, TouchableOpacity } from 'react-native';
-import { FlatList } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useEffect, useState } from 'react';
+import { FlatList, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 interface Note {
   id: string;
@@ -72,7 +70,7 @@ export default function App() {
       try {
         await AsyncStorage.setItem('notes', JSON.stringify(notes));
       } catch (error) {
-        console.error('Lỗi khi lưu ghi chú: namvu', error);
+        console.error('Lỗi khi lưu ghi chú: ', error);
       }
     };
 
